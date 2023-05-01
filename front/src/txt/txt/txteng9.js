@@ -1,0 +1,66 @@
+const txteng9 = [
+  ["Это проще простого.", "It's a piece of cake."],
+  ["я спешу.", "I am in a hurry."],
+  ["Здесь нечего делать.", "There is nothing to do."],
+  ["это моя вина.", "That's my fault."],
+  ["Это так любезно с вашей стороны!", "That is so kind of you."],
+  ["Это пустая трата времени.", "It's waste of time."],
+  ["я хочу сделать перерыв.", "I want to take a break."],
+  ["Это довольно долгий путь.", "It's quite a long time."],
+  ["Это довольно близко.", "It's quite close."],
+  ["Это так скучно!", "It's so boring."],
+  ["У нас много общего.", "We have a lot in common."],
+  ["Я весь во внимании.", "I am all ears."],
+  ["Это само собой разумеется.", "It goes without saying."],
+  ["я очень спешу.", "I am in a rush."],
+  ["Все в порядке.", "Everythings is in order."],
+  ["Я еще не готов.", "I'm not ready yet."],
+  ["Это не совсем то, что я ищу.", "That's not exactly what I'm looking for."],
+  [
+    "Это не совсем то, что бы я хотел.",
+    "That's not exactly what I'd like to see.",
+  ],
+  ["Это не имеет никакого значения.", "It doesn't make any difference."],
+  ["Это неважно.", "It doesn't matter."],
+  ["Не забудь это сделать.", "Don't forget to do this."],
+  ["Я не совсем уверен.", "I am not quite sure."],
+  ["Не принимай это близко к сердцу.", "Don't take it to heart."],
+  [
+    "Наоборот, я не хочу туда идти.",
+    "On the contrary, I don't want to go there.",
+  ],
+  [
+    "Другими словами, это не совсем то, что я действительно хочу.",
+    "In other words, that's not exactly what I really want.",
+  ],
+  [
+    "Честно говоря, я с вами не согласен.",
+    "To be honest I don't agree with you.",
+  ],
+  [
+    "Это недалеко, это в нескольких минутах хотьбы.",
+    "It's no far, it's within walking distance.",
+  ],
+  ["Не будь таким застенчивым.", "Don't be so shy."],
+  ["Это нечестно.", "That's not fair."],
+  ["Я не против.", "I don't mind."],
+  ["Не беспокойся об этом.", "Don't worry about it."],
+  [
+    "Ты живешь один или с родителями?",
+    "Do you live alone or with your parents?",
+  ],
+  ["В чем проблема?", "What's the matter?"],
+  ["У вас есть водительские права?", "Do you have a driving licence?"],
+  ["Сколько я вам должен?", "How much do I owe you?"],
+  [
+    "Сколько стоит билет?",
+    "How much is the ticket? (How much does the ticket cost?)",
+  ],
+  ["Что означает это слово?", "What does this word mean?"],
+  [
+    "У вас есть свободный столик на двоих?",
+    "Do you have a free table for two?",
+  ],
+];
+
+export default txteng9;

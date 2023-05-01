@@ -1,0 +1,38 @@
+version: "3"
+
+services:
+  eng_front:
+    build:
+      context: ./front
+      args:
+        API_URL: ${API_URL}
+    container_name: eng_front
+    command: serve -s build -l 3004
+    ports:
+      - "3004:3004"
+    restart: unless-stopped
+    logging:
+      options:
+        max-size: 10m
+    # before run cmd:  docker network create dock-vv-network
+    networks:
+      - v1-network
+
+  # quad_api:
+  #   build: ./back
+  #   container_name: quad_api
+  #   command: npm run start
+  #   restart: unless-stopped
+  #   environment:
+  #     - API_PORT=${API_PORT}
+  #   volumes:
+  #     - ./logs:/usr/src/app/logs
+  #   logging:
+  #     options:
+  #       max-size: 10m
+  #   networks:
+  #     - dock-vv-network
+
+networks:
+  v1-network:
+    external: true
