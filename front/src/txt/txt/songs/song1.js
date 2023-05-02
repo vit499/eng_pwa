@@ -1,4 +1,4 @@
-const txteng5 = [
+const song1 = [
   ["Если уходите, то закройте дверь.", "If you're leaving close the door."],
   ["Я больше не жду людей.", "I'm not expecting people anymore."],
   [
@@ -33,4 +33,4 @@ const txteng5 = [
   ],
 ];
 
-export default txteng5;
+export default song1;

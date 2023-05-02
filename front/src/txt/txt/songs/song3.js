@@ -1,4 +1,4 @@
-const txteng12 = [
+const song3 = [
   [
     "милое дитя, со временем ты увидишь линию",
     "Sweet Child in time you’ll see the line",
@@ -27,4 +27,4 @@ const txteng12 = [
   ["жди рикошет", "And wait for the ricochet."],
 ];
 
-export default txteng12;
+export default song3;

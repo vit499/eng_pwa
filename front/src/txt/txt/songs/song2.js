@@ -1,4 +1,4 @@
-const txteng11 = [
+const song2 = [
   [
     "Когда ты дрейфуешь в открытом океане",
     "If you're driftin' on an empty ocean",
@@ -34,4 +34,4 @@ const txteng11 = [
   ["я верю, я бы смог вернуться", "I believe, I could get back up."],
 ];
 
-export default txteng11;
+export default song2;

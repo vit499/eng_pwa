@@ -2,7 +2,6 @@ import txteng01 from "../txt/txteng1";
 import txteng02 from "../txt/txteng2";
 import txteng03 from "../txt/txteng3";
 import txteng04 from "../txt/txteng4";
-import txteng05 from "../txt/txteng5";
 import txteng06 from "../txt/txteng6";
 import txteng07 from "../txt/txteng7";
 import txteng08 from "../txt/txteng8";
@@ -10,8 +9,6 @@ import txteng09 from "../txt/txteng9";
 import txteng10 from "../txt/txteng10";
 import txteng10a from "../txt/txteng10a";
 import txteng10b from "../txt/txteng10b";
-import txteng11 from "../txt/txteng11";
-import txteng12 from "../txt/txteng12";
 import txteng13 from "../txt/txteng13";
 import txteng14 from "../txt/txteng14";
 import txteng15 from "../txt/txteng15";
@@ -19,6 +16,10 @@ import txteng16 from "../txt/txteng16";
 import txteng17 from "../txt/txteng17";
 import txteng18 from "../txt/txteng18";
 import txteng19 from "../txt/txteng19";
+import song1 from "../txt/songs/song1";
+import song2 from "../txt/songs/song2";
+import song3 from "../txt/songs/song3";
+import song4 from "../txt/songs/song4";
 
 const txts = [
   { arr: txteng01, descr: "phrases a1-1" },
@@ -39,9 +40,10 @@ const txts = [
   { arr: txteng17, descr: "get 2" },
   { arr: txteng18, descr: "get 3" },
   { arr: txteng19, descr: "get 4" },
-  { arr: txteng05, descr: "Blind man" },
-  { arr: txteng11, descr: "Sail awai" },
-  { arr: txteng12, descr: "Child in time" },
+  { arr: song1, descr: "Blind man" },
+  { arr: song2, descr: "Sail awai" },
+  { arr: song3, descr: "Child in time" },
+  { arr: song4, descr: "Anya" },
 ];
 
 export default txts;
