@@ -1,4 +1,4 @@
-const txteng6 = [
+const a_t12_1 = [
   ["Когда ты обычно ?", "When do you usually ?"],
   ["Почему ты всегда ?", "Why do you always ?"],
   ["Куда она ?", "Where does she ?"],
@@ -27,4 +27,4 @@ const txteng6 = [
   ["Как это обычно ?", "How does it usually ?"],
 ];
 
-export default txteng6;
+export default a_t12_1;
