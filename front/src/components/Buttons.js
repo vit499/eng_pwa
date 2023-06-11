@@ -6,7 +6,10 @@ const Buttons = observer(() => {
   const getHint = () => {
     engXStore.formAnswer();
   };
-  const update = () => {
+  const getPrev = () => {
+    engXStore.formPrevSentence();
+  };
+  const getNext = () => {
     engXStore.formSentence();
   };
   const onCombo = (event) => {
@@ -26,8 +29,11 @@ const Buttons = observer(() => {
           ))}
         </select>
         <div style={{ marginTop: "1rem" }}>
-          <button onClick={() => getHint()}>Hint</button>
-          <button style={{ marginLeft: "1rem" }} onClick={() => update()}>
+          <button onClick={() => getPrev()}>Prev</button>
+          <button style={{ marginLeft: "1rem" }} onClick={() => getHint()}>
+            Hint
+          </button>
+          <button style={{ marginLeft: "1rem" }} onClick={() => getNext()}>
             Next
           </button>
         </div>

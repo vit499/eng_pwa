@@ -22,6 +22,8 @@ import song1 from "../txt/songs/song1";
 import song2 from "../txt/songs/song2";
 import song3 from "../txt/songs/song3";
 import song4 from "../txt/songs/song4";
+import s_s10 from "../txt/sunshine/s10";
+import s_s11 from "../txt/sunshine/s11";
 
 const txts = [
   { arr: pl1, descr: "phrases a1-1" },
@@ -37,6 +39,8 @@ const txts = [
   { arr: a_t15_2, descr: "past (t15-2)" },
   { arr: a_t16_1, descr: "past (t16-1)" },
   { arr: a_t18_1, descr: "past-present (t18-1)" },
+  { arr: s_s10, descr: "sun selfish 10" },
+  { arr: s_s11, descr: "sun selfish 11" },
   { arr: txteng13, descr: "Irregular" },
   { arr: txteng14, descr: "frase verbs get" },
   { arr: txteng15, descr: "frase verbs" },

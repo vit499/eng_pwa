@@ -45,7 +45,7 @@ class EngXStore {
     // if (this._indCombo >= this._max) this._indCombo = 0;
     // const n = this._indCombo;
     const rand = engRandom.random;
-    str = engAStore.formSentence(rand);
+    str = engAStore.formSentence(rand, false);
     this._rusSentence = str;
     this._engSentence = "_";
     engTimer.reset();
@@ -57,6 +57,16 @@ class EngXStore {
     str = engAStore.formAnswer();
     this._engSentence = str;
     engTimer.stop();
+  }
+  formPrevSentence() {
+    let str = "";
+    // if (this._indCombo >= this._max) this._indCombo = 0;
+    // const n = this._indCombo;
+    const rand = engRandom.random;
+    str = engAStore.formSentence(rand, true);
+    this._rusSentence = str;
+    this._engSentence = "_";
+    engTimer.reset();
   }
 }
 

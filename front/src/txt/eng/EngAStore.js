@@ -4,6 +4,7 @@ class EngAStore {
   constructor() {
     this._ind = 0;
     this._indSub = 0;
+    this.dummy = 0;
     this.descr = txts.map((v, ind) => {
       return { id: ind, text: v.descr };
     });
@@ -14,10 +15,23 @@ class EngAStore {
   Init(ind) {
     this._ind = 0;
     this._indSub = 0;
+    this.dummy = 0;
     this._arr = txts[ind].arr;
     this._len = this._arr.length;
   }
-  formSentence(rand) {
+  formSentence(rand, prev) {
+    if (!rand) {
+      if (this.dummy == 0) {
+        this.dummy = 1;
+      } else {
+        if (prev) {
+          if (this._ind) this._ind--;
+        } else {
+          this._ind++;
+          if (this._ind >= this._len) this._ind = 0;
+        }
+      }
+    }
     if (rand) {
       this._indSub = Math.floor(Math.random() * this._len);
     } else {
@@ -26,7 +40,7 @@ class EngAStore {
     }
     let dst = "";
     dst = `${this._arr[this._indSub][0]}`;
-    this._ind++;
+    //if (!prev) this._ind++;
     return dst;
   }
 
