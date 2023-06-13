@@ -24,6 +24,8 @@ import song3 from "../txt/songs/song3";
 import song4 from "../txt/songs/song4";
 import s_s10 from "../txt/sunshine/s10";
 import s_s11 from "../txt/sunshine/s11";
+import s_c01 from "../txt/sunshine/cruel1";
+import ameng1 from "../txt/amer_eng/t1";
 
 const txts = [
   { arr: pl1, descr: "phrases a1-1" },
@@ -41,6 +43,7 @@ const txts = [
   { arr: a_t18_1, descr: "past-present (t18-1)" },
   { arr: s_s10, descr: "sun selfish 10" },
   { arr: s_s11, descr: "sun selfish 11" },
+  { arr: s_c01, descr: "sun cruel 1" },
   { arr: txteng13, descr: "Irregular" },
   { arr: txteng14, descr: "frase verbs get" },
   { arr: txteng15, descr: "frase verbs" },
@@ -48,6 +51,7 @@ const txts = [
   { arr: txteng17, descr: "get 2" },
   { arr: txteng18, descr: "get 3" },
   { arr: txteng19, descr: "get 4" },
+  { arr: ameng1, descr: "money" },
   { arr: song1, descr: "Blind man" },
   { arr: song2, descr: "Sail awai" },
   { arr: song3, descr: "Child in time" },

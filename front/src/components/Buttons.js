@@ -29,9 +29,11 @@ const Buttons = observer(() => {
           ))}
         </select>
         <div style={{ marginTop: "1rem" }}>
-          <button onClick={() => getPrev()}>Prev</button>
           <button style={{ marginLeft: "1rem" }} onClick={() => getHint()}>
             Hint
+          </button>
+          <button style={{ marginLeft: "1rem" }} onClick={() => getPrev()}>
+            Prev
           </button>
           <button style={{ marginLeft: "1rem" }} onClick={() => getNext()}>
             Next
