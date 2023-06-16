@@ -2,6 +2,7 @@ import pl1 from "./playlists/pl1";
 import pl2 from "./playlists/pl2";
 import a_t2 from "./alex_tren/a_t2";
 import a_t4 from "./alex_tren/a_t4";
+import a_t7 from "./alex_tren/a_t7";
 import a_t9 from "./alex_tren/a_t9";
 import a_t10 from "./alex_tren/a_t10";
 import a_t12_1 from "./alex_tren/a_t12_1";
@@ -26,12 +27,14 @@ import s_s10 from "../txt/sunshine/s10";
 import s_s11 from "../txt/sunshine/s11";
 import s_c01 from "../txt/sunshine/cruel1";
 import ameng1 from "../txt/amer_eng/t1";
+import jes1 from "../txt/jes/jes1";
 
 const txts = [
   { arr: pl1, descr: "phrases a1-1" },
   { arr: pl2, descr: "phrases a1-2" },
   { arr: a_t2, descr: "I am (t2)" },
   { arr: a_t4, descr: "Am I? (t4)" },
+  { arr: a_t7, descr: "Why you? (t7)" },
   { arr: a_t9, descr: "why am (cont) (t9)" },
   { arr: a_t10, descr: "present simple (t10)" },
   { arr: a_t12_1, descr: "why do you (t12-1)" },
@@ -52,6 +55,7 @@ const txts = [
   { arr: txteng18, descr: "get 3" },
   { arr: txteng19, descr: "get 4" },
   { arr: ameng1, descr: "money" },
+  { arr: jes1, descr: "jes1" },
   { arr: song1, descr: "Blind man" },
   { arr: song2, descr: "Sail awai" },
   { arr: song3, descr: "Child in time" },
