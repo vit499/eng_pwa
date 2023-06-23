@@ -1,5 +1,5 @@
 import { makeAutoObservable } from "mobx";
-import engTimer from "./Timer";
+import engTimer from "./TimerStore";
 import engRandom from "./Random";
 import engAStore from "../txt/eng/EngAStore";
 

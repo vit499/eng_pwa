@@ -8,6 +8,7 @@ import Timer from "./components/Timer";
 import Random from "./components/Random";
 import "./bootstrap.css";
 import Buttons from "./components/Buttons";
+import Audio from "./components/Audio";
 
 function App() {
   useEffect(() => {
@@ -33,6 +34,9 @@ function App() {
         </div>
         <div className="col-12">
           <Random />
+        </div>
+        <div className="col-12">
+          <Audio />
         </div>
       </div>
     </div>

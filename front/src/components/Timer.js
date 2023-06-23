@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { observer } from "mobx-react-lite";
-import engTimer from "../store/Timer";
+import engTimer from "../store/TimerStore";
 
 const Timer = observer(() => {
   const timer = useRef(0);

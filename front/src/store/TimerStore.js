@@ -40,16 +40,6 @@ class Timer {
     this._over = false;
     this._en = false;
   }
-
-  // startTimer() {
-  //   if (this._launch) return;
-  //   this._launch = true;
-  //   this._en = false;
-  //   console.log("start timer");
-  //   setInterval(() => {
-  //     this.inc();
-  //   }, 1000);
-  // }
 }
 
 const engTimer = new Timer();
