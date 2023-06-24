@@ -1,5 +1,4 @@
 import { makeAutoObservable } from "mobx";
-import http from "../http";
 
 const subT1 = [
   ["I", "я"],

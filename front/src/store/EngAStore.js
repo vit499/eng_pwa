@@ -1,4 +1,5 @@
-import txts from "../txt/index";
+import txts from "../data/txt/index";
+import engRandom from "./Random";
 
 class EngAStore {
   constructor() {
@@ -19,9 +20,10 @@ class EngAStore {
     this._arr = txts[ind].arr;
     this._len = this._arr.length;
   }
-  formSentence(rand, prev) {
+  formASentence(prev) {
+    const rand = engRandom.random;
     if (!rand) {
-      if (this.dummy == 0) {
+      if (this.dummy === 0) {
         this.dummy = 1;
       } else {
         if (prev) {
@@ -44,7 +46,7 @@ class EngAStore {
     return dst;
   }
 
-  formAnswer() {
+  formAAnswer() {
     const dst = `${this._arr[this._indSub][1]}`;
     return dst;
   }

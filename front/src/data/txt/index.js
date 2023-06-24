@@ -12,13 +12,14 @@ import a_t18_1 from "./alex_tren/a_t18_1";
 import a_t16_1 from "./alex_tren/a_t16_1";
 import a_t15_1 from "./alex_tren/a_t15_1";
 import a_t15_2 from "./alex_tren/a_t15_2";
-import txteng13 from "../txt/txteng13";
-import txteng14 from "../txt/txteng14";
-import txteng15 from "../txt/txteng15";
-import txteng16 from "../txt/txteng16";
-import txteng17 from "../txt/txteng17";
-import txteng18 from "../txt/txteng18";
-import txteng19 from "../txt/txteng19";
+import a_ir1 from "./alex_tren/txteng13";
+import a_fv1 from "./alex_tren/txteng14";
+import a_fv2 from "./alex_tren/txteng15";
+import ameng_get1 from "./amer_eng/txteng16";
+import ameng_get2 from "./amer_eng/txteng17";
+import ameng_get3 from "./amer_eng/txteng18";
+import ameng_get4 from "./amer_eng/txteng19";
+import ameng1 from "../txt/amer_eng/t1";
 import song1 from "../txt/songs/song1";
 import song2 from "../txt/songs/song2";
 import song3 from "../txt/songs/song3";
@@ -26,7 +27,6 @@ import song4 from "../txt/songs/song4";
 import s_s10 from "../txt/sunshine/s10";
 import s_s11 from "../txt/sunshine/s11";
 import s_c01 from "../txt/sunshine/cruel1";
-import ameng1 from "../txt/amer_eng/t1";
 import jes1 from "../txt/jes/jes1";
 
 const txts = [
@@ -47,13 +47,13 @@ const txts = [
   { arr: s_s10, descr: "sun selfish 10" },
   { arr: s_s11, descr: "sun selfish 11" },
   { arr: s_c01, descr: "sun cruel 1" },
-  { arr: txteng13, descr: "Irregular" },
-  { arr: txteng14, descr: "frase verbs get" },
-  { arr: txteng15, descr: "frase verbs" },
-  { arr: txteng16, descr: "get 1" },
-  { arr: txteng17, descr: "get 2" },
-  { arr: txteng18, descr: "get 3" },
-  { arr: txteng19, descr: "get 4" },
+  { arr: a_ir1, descr: "Irregular" },
+  { arr: a_fv1, descr: "frase verbs get" },
+  { arr: a_fv2, descr: "frase verbs" },
+  { arr: ameng_get1, descr: "get 1" },
+  { arr: ameng_get2, descr: "get 2" },
+  { arr: ameng_get3, descr: "get 3" },
+  { arr: ameng_get4, descr: "get 4" },
   { arr: ameng1, descr: "money" },
   { arr: jes1, descr: "jes1" },
   { arr: song1, descr: "Blind man" },

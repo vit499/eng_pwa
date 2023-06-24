@@ -1,24 +1,18 @@
 import { makeAutoObservable } from "mobx";
 import engTimer from "./TimerStore";
-import engRandom from "./Random";
-import engAStore from "../txt/eng/EngAStore";
+import engAStore from "./EngAStore";
+import audioStore from "./AudioStore";
 
 class EngXStore {
   constructor() {
-    this._load = "none";
-    this._id = 0;
     this._rusSentence = "";
     this._engSentence = "";
     this._date = new Date().toISOString();
-    //this._max = engAStore.len;
     this._combo = engAStore.descr;
     this._indCombo = 0;
     makeAutoObservable(this, {});
   }
 
-  Init() {
-    this._load = "none";
-  }
   get combo() {
     return this._combo;
   }
@@ -29,6 +23,7 @@ class EngXStore {
     if (ind >= this._combo.length) ind = 0;
     this._indCombo = ind;
     engAStore.Init(ind);
+    audioStore.setCurrentFolder(ind);
   }
   get comboItem() {
     return this._combo[this._indCombo].text;
@@ -40,33 +35,32 @@ class EngXStore {
     return this._engSentence;
   }
 
-  formSentence() {
+  formSentenceFromTimer() {
+    // from audio timer
     let str = "";
-    // if (this._indCombo >= this._max) this._indCombo = 0;
-    // const n = this._indCombo;
-    const rand = engRandom.random;
-    str = engAStore.formSentence(rand, false);
+    str = engAStore.formASentence(false);
     this._rusSentence = str;
     this._engSentence = "_";
     engTimer.reset();
+  }
+  formSentence() {
+    this.formSentenceFromTimer();
+    audioStore.stopTimer();
   }
   formAnswer() {
     let str = "";
-    // if (this._indCombo >= this._max) this._indCombo = 0;
-    // const n = this._indCombo;
-    str = engAStore.formAnswer();
+    str = engAStore.formAAnswer();
     this._engSentence = str;
     engTimer.stop();
+    audioStore.stopTimer();
   }
   formPrevSentence() {
     let str = "";
-    // if (this._indCombo >= this._max) this._indCombo = 0;
-    // const n = this._indCombo;
-    const rand = engRandom.random;
-    str = engAStore.formSentence(rand, true);
+    str = engAStore.formASentence(true);
     this._rusSentence = str;
     this._engSentence = "_";
     engTimer.reset();
+    audioStore.stopTimer();
   }
 }
 
