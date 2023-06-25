@@ -31,10 +31,6 @@ const txt = [
     "Почему ты не сказал мне об этом раньше?",
     "Why did not you tell me before about it?",
   ],
-  ["", ""],
-  ["", ""],
-  ["", ""],
-  ["", ""],
 ];
 
 export default txt;

@@ -10,8 +10,6 @@ const txt = [
     "You're a party animal. Cool. I'm down.",
   ],
   ["всегда пожалуйста, Петр", "Anytime, Peter"],
-  ["", ""],
-  ["", ""],
 ];
 
 export default txt;

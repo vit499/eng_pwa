@@ -47,12 +47,13 @@ class EngXStore {
     this.formSentenceFromTimer();
     audioStore.stopTimer();
   }
+  formAnswerFromAudio() {
+    this._engSentence = engAStore.formAAnswer();
+  }
   formAnswer() {
-    let str = "";
-    str = engAStore.formAAnswer();
-    this._engSentence = str;
+    this.formAnswerFromAudio();
     engTimer.stop();
-    audioStore.stopTimer();
+    //audioStore.stopTimer();
   }
   formPrevSentence() {
     let str = "";

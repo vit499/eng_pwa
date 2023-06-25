@@ -1,11 +1,14 @@
 const txteng18 = [
   ["Как ты добираешься до работы?", "How do you get to work?"],
-  ["Я прибыл в аэропорт в 5 часов.", "I got to the airport at five o'clock."],
+  [
+    "Я прибыл в аэропорт в пять часов.",
+    "I got to the airport at five o'clock.",
+  ],
   [
     "Скажи мне, как добраться до вокзала отсюда?",
     "Can you tell me how to get to the train station from here?",
   ],
-  ["Я обычно встаю в 7 часов", "I usually get up at seven o'clock."],
+  ["Я обычно встаю в семь часов", "I usually get up at seven o'clock."],
   ["Во сколько ты встаешь?", "What time do you get up?"],
   [
     "Майкл ладит с Полом, но не ладит с его босом.",

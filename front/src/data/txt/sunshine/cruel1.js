@@ -17,7 +17,6 @@ const txt = [
   ["Замолчи. Ты ленивый", "Shut up. You are a lazy person."],
   ["Я должен заплатить арендную плату", "I need to pay the house rent"],
   ["Это не моя головная боль", "It's not my headache"],
-  ["", ""],
 ];
 
 export default txt;

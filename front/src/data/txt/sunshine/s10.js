@@ -24,7 +24,6 @@ const txt = [
   ["тебе нужно найти собственную дочь", "You should find your own daughter"],
   ["моя дочь с твоим отцом", "My daughter is with your dad."],
   ["что ты хочешь сказать?", "What do you want to say"],
-  ["", ""],
 ];
 
 export default txt;
