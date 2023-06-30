@@ -20,31 +20,39 @@ function App() {
     fontSize: "1.25rem",
   };
   const divStyle = {
-    height: "200px",
-    backgroundColor: "#334455",
+    height: "220px",
+    // backgroundColor: "#008080",
+    // color: "#eeeeee",
+  };
+  const a = {
+    backgroundColor: "#2F4F4F",
     color: "#eeeeee",
+    height: "100vh",
+    fontSize: "1.25rem",
   };
   return (
-    <div className="container text-center " style={g}>
-      <div className="row" style={divStyle}>
-        <div className="col-2"></div>
-        <div className="col-8">
-          <Sentence />
+    <div style={a}>
+      <div className="container text-center ">
+        <div className="row" style={divStyle}>
+          <div className="col-2"></div>
+          <div className="col-8">
+            <Sentence />
+          </div>
+          <div className="col-2"></div>
         </div>
-        <div className="col-2"></div>
-      </div>
-      <div className="row">
-        <div className="col-12">
-          <Buttons />
-        </div>
-        <div className="col-12 mt-2">
-          <Timer />
-        </div>
-        <div className="col-12">
-          <Random />
-        </div>
-        <div className="col-12">
-          <Audio />
+        <div className="row">
+          <div className="col-12">
+            <Buttons />
+          </div>
+          <div className="col-12 mt-2">
+            <Timer />
+          </div>
+          <div className="col-12">
+            <Random />
+          </div>
+          <div className="col-12">
+            <Audio />
+          </div>
         </div>
       </div>
     </div>

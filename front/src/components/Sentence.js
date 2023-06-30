@@ -7,7 +7,7 @@ const Sentence = observer(() => {
     marginTop: "1rem",
   };
   return (
-    <div style={divStyle}>
+    <div className="mt-2">
       <div>
         <p>{`${engXStore.rusSentence}`}</p>
       </div>
