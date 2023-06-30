@@ -13,8 +13,13 @@ const Timer = observer(() => {
     };
   }, []);
 
+  const divStyle = {
+    height: "50px",
+    backgroundColor: "#334455",
+    color: "#eeeeee",
+  };
   return (
-    <div>
+    <div style={divStyle}>
       {engTimer._en && (
         <div>
           <span>Sec: {engTimer._sec}</span>

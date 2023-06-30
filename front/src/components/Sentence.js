@@ -4,7 +4,7 @@ import engXStore from "../store/EngXStore";
 
 const Sentence = observer(() => {
   const divStyle = {
-    height: "150px",
+    marginTop: "1rem",
   };
   return (
     <div style={divStyle}>
