@@ -16,9 +16,14 @@ function App() {
     engXStore.formSentence();
   }, []);
 
+  const divStyle = {
+    height: "150px",
+    backgroundColor: "#334455",
+    color: "#eeeeee",
+  };
   return (
-    <div className="container text-center">
-      <div className="row">
+    <div className="container text-center ">
+      <div className="row" style={divStyle}>
         <div className="col-2"></div>
         <div className="col-8">
           <Sentence />

@@ -3,8 +3,11 @@ import { observer } from "mobx-react-lite";
 import engXStore from "../store/EngXStore";
 
 const Sentence = observer(() => {
+  const divStyle = {
+    height: "150px",
+  };
   return (
-    <div>
+    <div style={divStyle}>
       <div>
         <p>{`${engXStore.rusSentence}`}</p>
       </div>
