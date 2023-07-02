@@ -1,4 +1,4 @@
-//import { makeAutoObservable, runInAction } from "mobx";
+import { makeAutoObservable, runInAction } from "mobx";
 // import mp3 from "../data/txt/mp3";
 // import engAStore from "./EngAStore";
 // import engXStore from "./EngXStore";
@@ -14,7 +14,8 @@ class AudioSynthStore {
     this.voiceRus = 0;
     this.voiceEng = 1;
     this.setVoice = false;
-    //makeAutoObservable(this, {});
+    this.xvoices = []
+    makeAutoObservable(this, {});
   }
 
   // ind=0, name=Microsoft Irina - Russian (Russia), lang=ru-RU
@@ -45,11 +46,12 @@ class AudioSynthStore {
   checkVoice() {
     if (this.setVoice) return;
     this.voices = synth.getVoices();
-    // for (let i = 0; i < this.voices.length; i++) {
-    //   console.log(
-    //     `ind=${i}, name=${this.voices[i].name}, lang=${this.voices[i].lang}`
-    //   );
-    // }
+    for (let i = 0; i < this.voices.length; i++) {
+      console.log(
+        `ind=${i}, name=${this.voices[i].name}, lang=${this.voices[i].lang}`
+      );
+      this.xvoices.push({id: i, text: this.voices[i].name})
+    }
     for (let i = 0; i < this.voices.length; i++) {
       if (this.voices[i].name.indexOf(voiceNameRus[0]) !== -1) {
         this.voiceRus = i;
@@ -79,6 +81,8 @@ class AudioSynthStore {
       }
     }
     //console.log(`voiceRus=${this.voiceRus}, voiceEng=${this.voiceEng}`);
+    this.xvoices.push({id: 55, text: this.voiceRus.toString()})
+    this.xvoices.push({id: 56, text: this.voiceEng.toString()})
     this.setVoice = true;
   }
   speakEng(text) {
