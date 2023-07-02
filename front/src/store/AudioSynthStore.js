@@ -11,8 +11,8 @@ class AudioSynthStore {
   constructor() {
     this.utter = null;
     //this.voices = synth.getVoices();
-    this.voiceRus = 0;
-    this.voiceEng = 1;
+    this.voiceRus = -1;
+    this.voiceEng = -1;
     this.setVoice = false;
     this.xvoices = []
     makeAutoObservable(this, {});
@@ -47,10 +47,10 @@ class AudioSynthStore {
     if (this.setVoice) return;
     this.voices = synth.getVoices();
     for (let i = 0; i < this.voices.length; i++) {
-      console.log(
-        `ind=${i}, name=${this.voices[i].name}, lang=${this.voices[i].lang}`
-      );
-      this.xvoices.push({id: i, text: this.voices[i].name})
+      // console.log(
+      //   `ind=${i}, name=${this.voices[i].name}, lang=${this.voices[i].lang}`
+      // );
+      this.xvoices.push({id: i, text: this.voices[i].name, lang: this.voices[i].lang})
     }
     for (let i = 0; i < this.voices.length; i++) {
       if (this.voices[i].name.indexOf(voiceNameRus[0]) !== -1) {
@@ -58,7 +58,7 @@ class AudioSynthStore {
         break;
       }
     }
-    if (this.voiceRus === 0) {
+    if (this.voiceRus === -1) {
       for (let i = 0; i < this.voices.length; i++) {
         if (this.voices[i].name.indexOf(voiceNameRus[1]) !== -1) {
           this.voiceRus = i;
@@ -72,7 +72,7 @@ class AudioSynthStore {
         break;
       }
     }
-    if (this.voiceEng === 1) {
+    if (this.voiceEng === -1) {
       for (let i = 0; i < this.voices.length; i++) {
         if (this.voices[i].name.indexOf(voiceNameEng[1]) !== -1) {
           this.voiceEng = i;
@@ -80,6 +80,10 @@ class AudioSynthStore {
         }
       }
     }
+    // if(this.voiceRus === -1) this.voiceRus = 0;
+    // if(this.voiceEng === -1) this.voiceEng = 1;
+    // this.voiceRus = -1;
+    // this.voiceEng = -1;
     //console.log(`voiceRus=${this.voiceRus}, voiceEng=${this.voiceEng}`);
     this.xvoices.push({id: 55, text: this.voiceRus.toString()})
     this.xvoices.push({id: 56, text: this.voiceEng.toString()})
@@ -88,13 +92,23 @@ class AudioSynthStore {
   speakEng(text) {
     this.checkVoice();
     this.utter = new SpeechSynthesisUtterance(text);
-    this.utter.voice = this.voices[this.voiceEng];
+    if(this.voiceEng === -1) {
+      this.utter.lang = "en-US"
+    }
+    else {
+      this.utter.voice = this.voices[this.voiceEng];
+    }
     synth.speak(this.utter);
   }
   speakRus(text) {
     this.checkVoice();
     this.utter = new SpeechSynthesisUtterance(text);
-    this.utter.voice = this.voices[this.voiceRus];
+    if(this.voiceRus === -1) {
+      this.utter.lang = "ru-RU";
+    }
+    else {
+      this.utter.voice = this.voices[this.voiceRus];
+    }
     synth.speak(this.utter);
   }
 }
