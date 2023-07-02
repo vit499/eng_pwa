@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { observer } from "mobx-react-lite";
 import audioStore from "../store/AudioStore";
+import autoNext from "../store/AutoNext";
 
 const Audio = observer(() => {
   const toggleAudio = () => {
@@ -9,7 +10,7 @@ const Audio = observer(() => {
 
   useEffect(() => {
     return () => {
-      audioStore.stopTimer();
+      autoNext.stopTimer();
     };
   }, []);
 

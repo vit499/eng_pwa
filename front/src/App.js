@@ -9,10 +9,12 @@ import Random from "./components/Random";
 import "./bootstrap.css";
 import Buttons from "./components/Buttons";
 import Audio from "./components/Audio";
+import AutoNext from "./components/AutoNext";
 
 function App() {
   useEffect(() => {
     console.log("app init");
+    engXStore.setIndCombo(0);
     engXStore.formSentence();
   }, []);
 
@@ -40,7 +42,7 @@ function App() {
           </div>
           <div className="col-2"></div>
         </div>
-        <div className="row">
+        <div className="row ">
           <div className="col-12">
             <Buttons />
           </div>
@@ -49,6 +51,9 @@ function App() {
           </div>
           <div className="col-12">
             <Random />
+          </div>
+          <div className="col-12">
+            <AutoNext />
           </div>
           <div className="col-12">
             <Audio />

@@ -28,7 +28,7 @@ const Buttons = observer(() => {
             </option>
           ))}
         </select>
-        <div style={{ marginTop: "1rem" }}>
+        <div style={{ marginTop: "2rem" }}>
           <button style={{ marginLeft: "1rem" }} onClick={() => getHint()}>
             Hint
           </button>

@@ -2,6 +2,8 @@ import { makeAutoObservable } from "mobx";
 import engTimer from "./TimerStore";
 import engAStore from "./EngAStore";
 import audioStore from "./AudioStore";
+import audioSynthStore from "./AudioSynthStore";
+import autoNext from "./AutoNext";
 
 class EngXStore {
   constructor() {
@@ -42,18 +44,24 @@ class EngXStore {
     this._rusSentence = str;
     this._engSentence = "_";
     engTimer.reset();
+    if (audioStore.enable) {
+      audioStore.speakAudioRus();
+    }
   }
   formSentence() {
     this.formSentenceFromTimer();
-    audioStore.stopTimer();
+    autoNext.stopTimer();
   }
-  formAnswerFromAudio() {
+  formAnswerFromTimer() {
     this._engSentence = engAStore.formAAnswer();
   }
   formAnswer() {
-    this.formAnswerFromAudio();
+    this.formAnswerFromTimer();
     engTimer.stop();
-    //audioStore.stopTimer();
+    if (audioStore.enable) {
+      audioSynthStore.speakEng(this._engSentence);
+    }
+    autoNext.stopTimer();
   }
   formPrevSentence() {
     let str = "";
@@ -61,7 +69,8 @@ class EngXStore {
     this._rusSentence = str;
     this._engSentence = "_";
     engTimer.reset();
-    audioStore.stopTimer();
+    autoNext.stopTimer();
+    //audioStore.stopTimer();
   }
 }
 
