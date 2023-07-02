@@ -6,9 +6,9 @@ const ListVoice = observer(() => {
   
   return (
     <div className="mt-2">
-      {audioSynthStore.xvoices && audioSynthStore.xvoices.map(v => (
+      {/* {audioSynthStore.xvoices && audioSynthStore.xvoices.map(v => (
         <div key={v.id}>{v.id} {v.text} {v.lang}</div>
-      ))}
+      ))} */}
     </div>
   );
 });

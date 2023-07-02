@@ -28,7 +28,7 @@ function App() {
   const a = {
     backgroundColor: "#2F4F4F",
     color: "#eeeeee",
-    // height: "100vh",
+    height: "100vh",
     fontSize: "1.25rem",
   };
   return (
@@ -56,9 +56,6 @@ function App() {
           </div>
           <div className="col-12">
             <Audio />
-          </div>
-          <div className="col-12">
-            <ListVoice />
           </div>
         </div>
       </div>
